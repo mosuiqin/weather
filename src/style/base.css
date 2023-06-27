@@ -1,0 +1,8 @@
+html{
+    font-size: 100px;
+}
+
+/* 1rem=html fontsize */
+body{
+    font-size: .20rem;
+}

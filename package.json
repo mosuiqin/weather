@@ -1,0 +1,51 @@
+{
+  "name": "visualization",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.4.1",
+    "@supermap/vue-iclient-mapboxgl": "^11.1.0-beta",
+    "@turf/turf": "^6.5.0",
+    "axios": "^1.4.0",
+    "core-js": "^3.6.5",
+    "echarts": "^4.9.0",
+    "jquery": "^3.7.0",
+    "mapbox-gl": "^2.15.0",
+    "netcdfjs": "^2.0.2",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.6",
+    "@vue/cli-plugin-eslint": "~4.4.6",
+    "@vue/cli-service": "~4.4.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
