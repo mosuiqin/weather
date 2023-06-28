@@ -11,7 +11,11 @@ export default {
   data() {
     return {
       map: null,
-      mapoptions: {
+    }
+  },
+  methods: {
+    init() {
+      this.map = new mapboxgl.Map({
         container: 'rainmap',
         center: [104.04318, 30.68141],
         zoom: 10,
@@ -36,11 +40,11 @@ export default {
             },
           ],
         },
-      },
-    }
+      })
+    },
   },
   mounted() {
-    this.map = new mapboxgl.Map(this.mapoptions)
+    this.init()
   },
 }
 </script>

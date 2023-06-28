@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import netcdfjs from 'netcdfjs';
+import echarts from '@supermap'
 export default {
   name: 'mapView',
   data() {
@@ -59,15 +59,10 @@ export default {
       tk: '1d109683f4d84198e37a38c442d68311',
     }
   },
+  methods:{},
   mounted() {
-    const xhr=new XMLHttpRequest()
-    xhr.open('get','../data/index_2D_201712042000.nc',true)
-    xhr.responseType='arraybuffer'
-    xhr.onload=()=>{
-      const data=new Uint8Array(xhr.response)
-      const ncfile=new netcdfjs(data)
-      console.log(ncfile);
-    }
+    // const url='http://10.45.1.179:8090/iserver/services/data-rain/rest/data/'
+    // new DatasetService(url).getDatasets()
   },
 }
 </script>
