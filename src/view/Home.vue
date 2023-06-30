@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import mapView from './map.vue'
+import mapView from './MapView/map.vue'
 import rainChart from './rainChart.vue'
 import rainMap from './rainMap.vue'
 export default {

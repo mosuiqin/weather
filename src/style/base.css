@@ -5,4 +5,5 @@ html{
 /* 1rem=html fontsize */
 body{
     font-size: .20rem;
+    font-family: 'MicrosoftYaHei';
 }
