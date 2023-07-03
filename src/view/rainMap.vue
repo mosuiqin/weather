@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import {loadRainData} from '../components/rainPontMap'
 import mapboxgl from '@supermap/vue-iclient-mapboxgl/static/libs/mapboxgl/mapbox-gl-enhance'
 export default {
   name: 'rainMap',
@@ -42,9 +43,11 @@ export default {
         },
       })
     },
+    
   },
   mounted() {
     this.init()
+    loadRainData(this.map,'d020108')
   },
 }
 </script>
