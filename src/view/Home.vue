@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <mapView  />
+    <mapView />
     <div class="left">
       <rainMap />
-      <rainChart  />
+      <rainChart />
     </div>
   </div>
 </template>
@@ -15,20 +15,6 @@ import rainMap from './rainMap.vue'
 export default {
   name: 'Home',
   components: { mapView, rainChart, rainMap },
-  data() {
-    return {
-      // CurrentTime: 11,
-    }
-  },
-  computed: {
-    
-  },
-  methods: {
-    // transferCurrentTime(data) {
-    //   this.CurrentTime = data
-    //   console.log(this.CurrentTime)
-    // },
-  },
 }
 </script>
 
@@ -40,7 +26,7 @@ export default {
   margin: 0.5%;
 }
 .left {
-  width: 44.5%;
+  width: 34.5%;
   height: 100%;
   margin-left: 0.5%;
   display: flex;

@@ -7,13 +7,8 @@
         :collapsed="false"
       ></sm-tdt-map-switcher>
     </sm-web-map>
-    <mapContent/>
-    <mapTimeLine
-      :timeInfo="timeInfo"
-      :map="map"
-      v-if="map"
-    >
-    </mapTimeLine>
+    <mapContent />
+    <mapTimeLine :timeInfo="timeInfo" :map="map" v-if="map"> </mapTimeLine>
   </div>
 </template>
 
@@ -84,9 +79,9 @@ export default {
     timeInfo() {
       return this.$store.state.timeInfo
     },
-    currentTime(){
+    currentTime() {
       return this.$store.state.currentTime
-    }
+    },
   },
   watch: {},
   methods: {
@@ -108,7 +103,7 @@ export default {
 
 <style scoped>
 .mapWrapper {
-  width: 55%;
+  width: 65%;
   height: 100%;
   border-width: 0.24rem;
   border-image: url('../../image/border.png') 12 fill / 1 / 0 stretch;

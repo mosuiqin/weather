@@ -11429,6 +11429,11 @@
   "resolved" "https://registry.npmjs.org/vue-ribbon/-/vue-ribbon-1.0.1.tgz"
   "version" "1.0.1"
 
+"vue-router@^2.8.1":
+  "integrity" "sha512-MC4jacHBhTPKtmcfzvaj2N7g6jgJ/Z/eIjZdt+yUaUOM1iKC0OUIlO/xCtz6OZFFTNUJs/1YNro2GN/lE+nOXA=="
+  "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-2.8.1.tgz"
+  "version" "2.8.1"
+
 "vue-router@^3.0.1":
   "integrity" "sha512-VYXZQLtjuvKxxcshuRAwjHnciqZVoXAjTjcqBTz4rKc8qih9g9pI3hbDjmqXaHdgL3v8pV6P8Z335XvHzESxLQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-3.6.5.tgz"
