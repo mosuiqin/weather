@@ -7,12 +7,11 @@
         :collapsed="false"
       ></sm-tdt-map-switcher>
     </sm-web-map>
-    <mapContent :timeInfo="this.currentTime" />
+    <mapContent/>
     <mapTimeLine
       :timeInfo="timeInfo"
       :map="map"
       v-if="map"
-      @changeCurrentTime="changeCurrentTime"
     >
     </mapTimeLine>
   </div>
@@ -22,7 +21,6 @@
 import mapContent from './mapContent.vue'
 import mapTimeLine from './mapTimeLine.vue'
 import { loadRainData } from '../../components/rainPontMap'
-// import { Ref } from '@vue/composition-api'
 
 export default {
   name: 'mapView',
@@ -77,7 +75,6 @@ export default {
       dataUrl: 'http://10.45.1.179:8090/iserver/services/data-rain2/rest/data',
       sourcename: 'rain',
       map: null,
-      currentTime: { dataset: 'd013008', time: ' 01-30 08:00' },
     }
   },
   created() {
@@ -87,6 +84,9 @@ export default {
     timeInfo() {
       return this.$store.state.timeInfo
     },
+    currentTime(){
+      return this.$store.state.currentTime
+    }
   },
   watch: {},
   methods: {
@@ -99,19 +99,10 @@ export default {
       this.$store.commit('getTimeInfo')
     },
     changeRainData(currentTime, map) {
-      const layer = this.map.getStyle().layers
-      console.log(layer)
       loadRainData(map, currentTime.dataset)
     },
-    changeCurrentTime(data) {
-      this.currentTime = data
-    },
-    queryRainData() {},
   },
-  mounted() {
-    this.queryRainData()
-    // this.changeRainData(this.map, this.currentTime)
-  },
+  mounted() {},
 }
 </script>
 

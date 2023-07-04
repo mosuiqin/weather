@@ -20,7 +20,6 @@
 <script>
 export default {
   name: 'mapContent',
-  props: ['timeInfo'],
   data() {
     return {
       maxCity: '成都市',
@@ -28,6 +27,11 @@ export default {
       minCity: '甘孜藏族自治州',
       minvalue: 0,
     }
+  },
+  computed: {
+    timeInfo() {
+      return this.$store.state.currentTime
+    },
   },
   watch: {
     'timeInfo.dataset'() {
@@ -37,12 +41,9 @@ export default {
   methods: {
     getData() {
       const dataset = this.timeInfo.dataset
-      console.log(dataset)
       import(`../../data/city${dataset.slice(1, 7)}.json`).then((res) => {
-        const avgData = []
-        for (let item in res.default) {
-          avgData.push(res.default[item].avg)
-        }
+        const avgData = res.default.map((item)=>item.avg)
+
         this.maxvalue = Math.max(...avgData)
         let maxindex = avgData.findIndex((item) => {
           return this.maxvalue == item
@@ -57,10 +58,7 @@ export default {
       })
     },
   },
-  mounted() {
-    this.getData(this.$props.timeInfo.dataset)
-    console.log(this.$props.timeInfo.dataset)
-  },
+  mounted() {},
 }
 </script>
 
