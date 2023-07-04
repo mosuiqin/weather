@@ -1,0 +1,57 @@
+{
+    "extent":{"leftBottom":{"x":-20037508.3427892,"y":-20037508.3427891},
+"rightTop":{"x":20037508.3427892,"y":20037508.3427891}},
+"level":4,"center":{"x":11882928.1149458,"y":3962448.31124511},
+"baseLayer":{
+    "layerType":"TILE",
+    "name":"China_Dark",
+    "url":"https://maptiles.supermapol.com/iserver/services/map_China/rest/maps/China_Dark"},
+    "layers":[
+        {"layerType":"RANGE",
+        "visible":true,
+        "themeSetting":
+        {"themeField":"nowConfirmed",
+        "customSettings":{
+            "0":{
+                "color":"#f4f4f4",
+                "segment":{"end":1}},
+                "1":{
+                    "color":"#fdd49e",
+                "segment":{"start":1,"end":11}},
+                "2":{
+                    "color":"#fdbb84",
+                    "segment":{"start":11,"end":51}},
+                    "3":{
+                        "color":"#fc8d59",
+                        "segment":{"start":51,"end":101}},
+                        "4":{
+                            "color":"#ef6548",
+                            "segment":{"start":101,"end":201}},
+                            "5":{"color":"#d7301f","segment":{"start":201,"end":100000}}},
+                            "segmentMethod":"offset",
+                            "segmentCount":6,
+                            "colors":["#ffc6c4","#f4a3a8","#e38191","#cc607d","#ad466c","#8b3058","#672044"]},
+                            "name":"ProviceDataWithNcp",
+                            "featureType":"POLYGON",
+                            "style":{
+                                "strokeWidth":1,
+                                "fillColor":"#d7301f",
+                                "fillOpacity":1,
+                                "lineDash":"solid",
+                                "strokeColor":"#83838d",
+                                "type":"POLYGON","strokeOpacity":1},
+                                "projection":"EPSG:4326",
+                                "legendSetting":{"isFold":false,"isShow":true},
+                                "enableFields":["Name","UserID","daysNoLocalIncrement","localCasesIncrement","maxLocalIncrPastThreeDays","nowConfirmed","confirmedAdd","confirmed","importedCasesIncrement","daysNoConfirmedAdd","provinceName"],
+                                "dataSource":{"accessType":"DIRECT","type":"PORTAL_DATA","serverId":"94082089"}},
+                                {"layerType":"VECTOR","visible":true,"name":"provincelabel","featureType":"POINT",
+                                "labelStyle":{"fontFamily":"微软雅黑","fill":"#333333","backgroundFill":[255,255,255,1],"labelField":"省份"},
+                                "style":{"fillColor":"#EE4D5A","strokeWidth":1,"fillOpacity":0,"radius":8,"strokeColor":"#ffffff",
+                                "type":"BASIC_POINT","strokeOpacity":0},
+                                "projection":"EPSG:4326",
+                                "enableFields":["省份"],
+                                "dataSource":{"accessType":"DIRECT",
+                                "type":"PORTAL_DATA","serverId":"203554293"}}],
+                                "description":"测试数据，0402","projection":"EPSG:3857","title":"现有确诊",
+                                "version":"1.0",
+                                "rootUrl":"https://www.supermapol.com/services/../"}
